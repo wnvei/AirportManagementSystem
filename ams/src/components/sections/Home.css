@@ -1,0 +1,35 @@
+.shiny-text {
+  background: linear-gradient(110deg, #d3d3d3, white, #d3d3d3);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: shine 4s linear infinite, pulse-glow 2.5s ease-in-out infinite;
+
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 0 40px rgba(255, 255, 255, 0.4))
+          drop-shadow(0 0 60px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 0 40px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 60px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))
+            drop-shadow(0 0 60px rgba(255, 255, 255, 0.6))
+            drop-shadow(0 0 90px rgba(255, 255, 255, 0.4));
+  }
+}
